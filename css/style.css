@@ -152,6 +152,7 @@ button.next {
 
 .slide img{
     height: 100%;
+    background: linear-gradient(to bottom, rgba(6, 18, 30, 1), #06121e);
 }
 
 .slide-text {
@@ -163,7 +164,7 @@ button.next {
 
 button.prev, button.next {
     padding: 5px;
-    font-size: 4vw;
+    font-size: 2vw;
 }
 
 @media (max-width: 576px) {

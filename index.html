@@ -58,31 +58,11 @@
             <button class="next">❯</button>
         </div>
     </main>
+
+    <section class="">
+        <article>adkajshdkajhsdkj</article>
+    </section>
     
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            let currentIndex = 0;
-            const slides = document.querySelectorAll('.slide');
-            const totalSlides = slides.length;
-        
-            document.querySelector('.next').addEventListener('click', function () {
-                currentIndex = (currentIndex + 1) % totalSlides;
-                updateCarousel();
-            });
-        
-            document.querySelector('.prev').addEventListener('click', function () {
-                currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-                updateCarousel();
-            });
-        
-            function updateCarousel() {
-                const offset = -currentIndex * 100;
-                document.querySelector('.slides').style.transform = `translateX(${offset}%)`;
-            }
-        });
-        </script>
-
     <script src="./js/script.js"></script>
 </body>
 </html>
