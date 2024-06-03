@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Links CSS -->
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -18,12 +25,63 @@
                 <div></div>
             </div>
             <ul id="navegacao" class="navegacao">
-                <li><a href="#">a</a></li>
-                <li><a href="#">b</a></li>
-                <li><a href="#">c</a></li>
+                <li><a href="integrantes.html">Integrantes</a></li>
+                <li><a href="sobre.hmtl">A</a></li>
+                <li><a href="ecochallenge.html">Eco Challenge</a></li>
             </ul>
         </nav>
     </header>
+
+    <main class="hero">
+        <div class="carousel">
+            <div class="slides">
+                <div class="slide">
+                    <img src="./img/hero1.png" alt="Hero Image 1">
+                    <div class="slide-text">
+                        <h1>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus nihil excepturi quaerat! Omnis optio reprehenderit doloremque quibusdam pariatur nihil voluptatum, rerum quidem cupiditate iste consequuntur quas impedit, est qui ipsum?</h1>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="./img/hero2.png" alt="Hero Image 2">
+                    <div class="slide-text">
+                        <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil totam officiis vitae soluta quasi atque beatae, iure maiores sit voluptas repellendus optio ratione eligendi. Dolore eos aliquid id sunt incidunt?</h1>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="./img/hero3.png" alt="Hero Image 3">
+                    <div class="slide-text">
+                        <h1>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus quia deserunt modi voluptatem nisi facere deleniti sunt recusandae animi maiores nemo eligendi, explicabo porro! Dolor voluptatibus consectetur quod. Ad, earum.</h1>
+                    </div>
+                </div>
+            </div>
+            <button class="prev">❮</button>
+            <button class="next">❯</button>
+        </div>
+    </main>
+    
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            let currentIndex = 0;
+            const slides = document.querySelectorAll('.slide');
+            const totalSlides = slides.length;
+        
+            document.querySelector('.next').addEventListener('click', function () {
+                currentIndex = (currentIndex + 1) % totalSlides;
+                updateCarousel();
+            });
+        
+            document.querySelector('.prev').addEventListener('click', function () {
+                currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+                updateCarousel();
+            });
+        
+            function updateCarousel() {
+                const offset = -currentIndex * 100;
+                document.querySelector('.slides').style.transform = `translateX(${offset}%)`;
+            }
+        });
+        </script>
 
     <script src="./js/script.js"></script>
 </body>

@@ -7,6 +7,9 @@
     border: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 
 body{
@@ -19,16 +22,17 @@ body{
     display: flex;
     justify-content: space-between;
     font-size: 1.3rem;
+    height: 5rem;
 }
 
 .logo-header{
     display: flex;
     align-items: center;
-    background-color: var(--background-logo);
+    background-color: var(--text-color);
 }
 
 .logo-header img{
-    height: 6vh;
+    height: 5vh;
     margin: 0 1rem;
 }
 
@@ -71,23 +75,116 @@ body{
     height: 4px;
 }
 
+.hero {
+    position: relative;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.carousel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    position: relative;
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide-text {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-70%);
+    color: #FFFFFF;
+    text-align: left;
+    z-index: 2;
+}
+
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--text-color);
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    z-index: 3;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+.slide{
+    height: 90vh;
+}
+
+.slide img{
+    height: 100%;
+}
+
+.slide-text {
+    width: 80vw;
+    padding: 10px;
+    font-size: 16px;
+    transform: translateX(-50%);
+}
+
+button.prev, button.next {
+    padding: 5px;
+    font-size: 4vw;
+}
+
 @media (max-width: 576px) {
     .header{
-        background-color: var(--background-logo);
-        height: 20vh;
+        background-color: var(--text-color);
+        height: 8vh;
         padding: 1rem;
     }
 
     .logo-header img{
-        height: 8vh;
+        height: 4vh;
     }
 
     .navegacao{
+        background-color: #FFFFFF;
         display: block;
         position: absolute;
         width: 100vw;
         left: -100vw;
-        top: 4rem;
+        top: 3rem;
+        z-index: 10000;
     }
 
     .navegacao li{
