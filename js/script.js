@@ -33,7 +33,7 @@ function startAutoSlide() {
     setInterval(function () {
         contador = (contador + 1) % totalSlides;
         updateCarousel();
-    }, 4000);
+    }, 6000);
 }
 
 startAutoSlide();
