@@ -23,6 +23,11 @@
     padding: 1rem;
 }
 
+.title{
+    display: flex;
+    justify-content: center;
+}
+
 @media (min-width: 1441px){
     .participante:hover{
         width: 45rem;
