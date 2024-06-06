@@ -310,6 +310,16 @@ button.prev, button.next {
     border-bottom: 2px solid var(--text-color);
 }
 
+@media (max-width: 1200px){
+    .card .article{
+        flex-direction: column;
+    }
+
+    .main .article{
+        flex-direction: column;
+    }
+}
+
 @media (max-width: 576px) {
     .header{
         background-color: var(--text-color);

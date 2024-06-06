@@ -1,0 +1,42 @@
+:root{
+    --background-logo: #01CBE1;
+    --text-color: #003755;
+}
+
+h1{
+    font-size: 2rem;
+}
+
+.hero{
+    height: 70vh;
+}
+
+.slide-text{
+    text-align: center;
+}
+
+.slide-text .sub-text{
+    font-size: 1.3rem;
+}
+
+@media (max-width: 1200px){
+    .card .article{
+        flex-direction: column;
+        padding: 1rem auto;
+    }
+
+    .card{
+        height: auto;
+        margin: 1rem auto;
+    }
+
+    .card img{
+        padding-top: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .card{
+        height: auto;
+    }
+}
